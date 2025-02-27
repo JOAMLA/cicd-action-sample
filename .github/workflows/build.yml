@@ -25,5 +25,11 @@ jobs:
       - name: UserWay Accessibility Analysis
         uses: UserWayOrg/cicd-action@main
         with:
-          token: ${{ secrets.USERWAY_TOKEN }}
+          token: S{{ secrets.USERWAY_TOKEN }}
           report_paths: './uw-a11y-reports'
+
+          # .github/workflows/build.yml
+      - name: UserWay Accessibility Analysis
+        uses: UserWayOrg/cicd-action@main
+        with:
+          token: S{{ secrets.USERWAY_TOKEN }}
